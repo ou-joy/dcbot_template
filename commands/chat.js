@@ -1,3 +1,4 @@
+const { SlashCommandBuilder } = require("discord.js");
 const { Configuration, OpenAIApi } = require("openai");
 
 require("dotenv").config();
@@ -25,7 +26,7 @@ module.exports = {
                 },
             ],
         });
-        const responseMessage = '> ' + interaction.options.getString('input') + '\n' + response.data.choices[0].message.content;​
+        const responseMessage = '> ' + interaction.options.getString('input') + '\n' + response.data.choices[0].message.content;
         interaction.editReply(responseMessage);
     },
 };

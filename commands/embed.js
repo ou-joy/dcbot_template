@@ -4,6 +4,8 @@ module.exports = {
     async execute(client, interaction) {
         const embed = new EmbedBuilder().setTitle("I'm an Embed");
         interaction.reply({ embeds: [embed] });
+        
+
     },
 };
 /*
